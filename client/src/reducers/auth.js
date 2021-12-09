@@ -4,7 +4,8 @@ import {
     USER_LOADED,
     AUTH_ERROR,
     LOGIN_SUCCESS,
-    LOGIN_FAIL
+    LOGIN_FAIL,
+    LOGOUT
 } from '../actions/types';
 
 const initialState = {
@@ -28,6 +29,7 @@ export default function(state = initialState, action) {
                 loading: false
             }
         
+        case LOGOUT:
         case LOGIN_FAIL:
         case AUTH_ERROR:
         case REGISTER_FAIL:
