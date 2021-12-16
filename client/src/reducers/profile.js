@@ -8,7 +8,7 @@ const initialState = {
     error: {}
 };
 
-export default function(state = initialState, action) {
+export default function profileReducer(state = initialState, action) {
     const { type, payload } = action;
 
     switch(type) {
@@ -25,7 +25,7 @@ export default function(state = initialState, action) {
                 ...state,
                 profiles: payload,
                 loading: false
-            }
+            };
         
         case PROFILE_ERROR:
             return {
